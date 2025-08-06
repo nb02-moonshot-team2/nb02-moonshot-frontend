@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/shared/components/ProjectIcon.module.css"],"sourcesContent":["\n.projectIcon.blue {\n  color: #7A87FF;\n}\n\n.projectIcon.pink {\n  color: #F078E4;\n}\n\n.projectIcon.purple {\n  color: #A969F3;\n}\n"],"names":[],"mappings":"AACA;;;;AAIA;;;;AAIA"}}]
+}

@@ -1,0 +1,48 @@
+/* [project]/app/(main)/tasks/components/BoardView.module.css [app-client] (css) */
+.BoardView-module__FYz60W__container {
+  min-height: 600px;
+  display: flex;
+}
+
+.BoardView-module__FYz60W__column {
+  border-right: 1px solid #e5e5ea;
+  flex-direction: column;
+  gap: 8px;
+  width: 300px;
+  padding: 0 8px;
+  display: flex;
+}
+
+.BoardView-module__FYz60W__column:first-child {
+  padding-left: 0;
+}
+
+.BoardView-module__FYz60W__column:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.BoardView-module__FYz60W__header {
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 27px;
+}
+
+.BoardView-module__FYz60W__header.BoardView-module__FYz60W__todo {
+  color: #66666e;
+  background-color: #e5e5ea;
+}
+
+.BoardView-module__FYz60W__header.BoardView-module__FYz60W__inProgress {
+  color: #2d38ba;
+  background-color: #e5e7ff;
+}
+
+.BoardView-module__FYz60W__header.BoardView-module__FYz60W__done {
+  color: #00802b;
+  background-color: #d9f8de;
+}
+
+/*# sourceMappingURL=app_%28main%29_tasks_components_BoardView_module_css_e59ae46c._.single.css.map*/

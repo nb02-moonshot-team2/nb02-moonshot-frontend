@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/(main)/layout.module.css"],"sourcesContent":[".body {\n  display: flex;\n  max-width: 100%;\n  overflow-x: hidden;\n  min-height: 100vh;\n  background-color: #F6F6F8;\n  margin: 0;\n}\n\n.body .main {\n  flex-grow: 1;\n  overflow-x: auto;\n}\n\n.body .nav {\n  width: 240px;\n  flex-shrink: 0;\n}\n"],"names":[],"mappings":"AAAA;;;;;;;;;AASA;;;;;AAKA"}}]
+}

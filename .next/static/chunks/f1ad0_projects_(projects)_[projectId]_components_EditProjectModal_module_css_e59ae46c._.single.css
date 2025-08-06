@@ -1,0 +1,35 @@
+/* [project]/app/(main)/projects/(projects)/[projectId]/components/EditProjectModal.module.css [app-client] (css) */
+.EditProjectModal-module__dGFV-W__modal {
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+}
+
+.EditProjectModal-module__dGFV-W__title {
+  color: #333236;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.EditProjectModal-module__dGFV-W__form {
+  flex-direction: column;
+  gap: 24px;
+  display: flex;
+}
+
+.EditProjectModal-module__dGFV-W__inputContainer {
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  display: flex;
+}
+
+.EditProjectModal-module__dGFV-W__input, .EditProjectModal-module__dGFV-W__button {
+  width: 100%;
+}
+
+/*# sourceMappingURL=f1ad0_projects_%28projects%29_%5BprojectId%5D_components_EditProjectModal_module_css_e59ae46c._.single.css.map*/

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/(main)/projects/(projects)/[projectId]/members/components/RemoveMember.module.css"],"sourcesContent":[".removeMember {\n  color: #66666e;\n  font-size: 14px;\n  font-weight: 700;\n  line-height: 24px;\n  text-decoration: underline;\n  cursor: pointer;\n}"],"names":[],"mappings":"AAAA"}}]
+}

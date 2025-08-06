@@ -1,0 +1,48 @@
+/* [project]/shared/components/ImageInput.module.css [app-client] (css) */
+.ImageInput-module__eEv__a__hiddenInput {
+  display: none;
+}
+
+.ImageInput-module__eEv__a__container {
+  margin-top: 8px;
+}
+
+.ImageInput-module__eEv__a__container.ImageInput-module__eEv__a__preview {
+  border-radius: 8px;
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+.ImageInput-module__eEv__a__container.ImageInput-module__eEv__a__blank {
+  align-items: center;
+  gap: 16px;
+  display: flex;
+}
+
+.ImageInput-module__eEv__a__container.ImageInput-module__eEv__a__blank > .ImageInput-module__eEv__a__image {
+  flex-grow: 0;
+}
+
+.ImageInput-module__eEv__a__image {
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 1px solid #dddee4;
+  border-radius: 8px;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+}
+
+.ImageInput-module__eEv__a__removeButton {
+  z-index: 1;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+/*# sourceMappingURL=shared_components_ImageInput_module_css_e59ae46c._.single.css.map*/

@@ -1,0 +1,16 @@
+/* [project]/app/(main)/settings/page.module.css [app-client] (css) */
+.page-module__ZNSfna__container {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.page-module__ZNSfna__card {
+  border-right: 1px solid var(--neutral-gray-15, #ededf0);
+  background: var(--neutral-gray-00, #fff);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .02);
+}
+
+/*# sourceMappingURL=app_%28main%29_settings_page_module_css_e59ae46c._.single.css.map*/

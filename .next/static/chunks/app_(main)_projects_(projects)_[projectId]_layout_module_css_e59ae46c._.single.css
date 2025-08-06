@@ -1,0 +1,70 @@
+/* [project]/app/(main)/projects/(projects)/[projectId]/layout.module.css [app-client] (css) */
+.layout-module__u76s8a__wrapper {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.layout-module__u76s8a__breadcrumb {
+  margin-bottom: 20px;
+}
+
+.layout-module__u76s8a__link {
+  color: #66666e;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  text-decoration: none;
+  display: flex;
+}
+
+.layout-module__u76s8a__chevron {
+  width: 24px;
+  height: 24px;
+}
+
+.layout-module__u76s8a__container {
+  background: #fff;
+  border: 1px solid #ededf0;
+  border-radius: 16px;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px;
+  display: flex;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .02);
+}
+
+.layout-module__u76s8a__header {
+  flex-direction: column;
+  gap: 4px;
+  display: flex;
+  position: relative;
+}
+
+.layout-module__u76s8a__moreMenu {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.layout-module__u76s8a__projectIcon {
+  width: 40px;
+  height: 40px;
+}
+
+.layout-module__u76s8a__title {
+  color: #333236;
+  margin: 0;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.layout-module__u76s8a__description {
+  color: #888893;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 27px;
+}
+
+/*# sourceMappingURL=app_%28main%29_projects_%28projects%29_%5BprojectId%5D_layout_module_css_e59ae46c._.single.css.map*/

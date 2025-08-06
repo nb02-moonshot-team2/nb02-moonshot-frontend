@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/(main)/tasks/page.module.css"],"sourcesContent":[".container {\n  padding: 0 40px;\n  width: 100%;\n  height: 100vh;\n  overflow: auto;\n}\n\n.title {\n  margin: 40px 0;\n  font-size: 38px;\n  font-weight: 700;\n  line-height: 50px;\n}\n\n.filter {\n  position: sticky;\n  top: 0;\n  z-index: 1;\n  background-color: #f6f6f8;\n}\n\n.view {\n  margin-top: 16px;\n  min-height: 600px;\n}\n"],"names":[],"mappings":"AAAA;;;;;;;AAOA;;;;;;;AAOA;;;;;;;;AAOA"}}]
+}

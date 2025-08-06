@@ -1,0 +1,48 @@
+/* [project]/shared/components/PopoverMenu.module.css [app-client] (css) */
+.PopoverMenu-module__cQMBkG__button {
+  color: #66666e;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  display: flex;
+}
+
+.PopoverMenu-module__cQMBkG__button > svg {
+  width: 24px;
+  height: 24px;
+}
+
+.PopoverMenu-module__cQMBkG__button.PopoverMenu-module__cQMBkG__active, .PopoverMenu-module__cQMBkG__button:hover {
+  background-color: #f6f6f8;
+}
+
+.PopoverMenu-module__cQMBkG__menu {
+  background: #fff;
+  border: 1px solid #e5e5ea;
+  border-radius: 8px;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 112px;
+  padding: 4px;
+  display: flex;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+}
+
+.PopoverMenu-module__cQMBkG__menuItem {
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+  padding: 4px 8px;
+  line-height: 27px;
+}
+
+.PopoverMenu-module__cQMBkG__menuItem:hover, .PopoverMenu-module__cQMBkG__menuItem.PopoverMenu-module__cQMBkG__active {
+  background-color: #ededf0;
+}
+
+/*# sourceMappingURL=shared_components_PopoverMenu_module_css_e59ae46c._.single.css.map*/

@@ -1,0 +1,42 @@
+/* [project]/app/(auth)/shared.module.css [app-client] (css) */
+.shared-module__TwSlQq__container {
+  flex-direction: column;
+  gap: 32px;
+  display: flex;
+}
+
+.shared-module__TwSlQq__title {
+  margin: 0;
+}
+
+.shared-module__TwSlQq__form {
+  flex-direction: column;
+  gap: 16px;
+  display: flex;
+}
+
+.shared-module__TwSlQq__inputContainer {
+  flex-direction: column;
+  gap: 4px;
+  display: flex;
+}
+
+.shared-module__TwSlQq__linkContainer {
+  text-align: center;
+}
+
+.shared-module__TwSlQq__socialLoginContainer {
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  display: flex;
+}
+
+.shared-module__TwSlQq__socialButtonContainer {
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  display: flex;
+}
+
+/*# sourceMappingURL=app_%28auth%29_shared_module_css_e59ae46c._.single.css.map*/

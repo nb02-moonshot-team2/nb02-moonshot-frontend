@@ -1,0 +1,32 @@
+/* [project]/app/(main)/settings/components/SettingsForm.module.css [app-client] (css) */
+.SettingsForm-module__LFlbkG__innerContainer {
+  flex-direction: column;
+  gap: 24px;
+  max-width: 400px;
+  display: flex;
+}
+
+.SettingsForm-module__LFlbkG__title {
+  color: #333236;
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.SettingsForm-module__LFlbkG__divider {
+  border: none;
+  border-bottom: 1px solid #ededf0;
+  width: 100%;
+  height: 1px;
+}
+
+.SettingsForm-module__LFlbkG__inputContainer {
+  margin-bottom: 20px;
+}
+
+.SettingsForm-module__LFlbkG__input, .SettingsForm-module__LFlbkG__button {
+  width: 100%;
+}
+
+/*# sourceMappingURL=app_%28main%29_settings_components_SettingsForm_module_css_e59ae46c._.single.css.map*/

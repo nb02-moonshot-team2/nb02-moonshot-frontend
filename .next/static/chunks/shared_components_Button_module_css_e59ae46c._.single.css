@@ -1,0 +1,50 @@
+/* [project]/shared/components/Button.module.css [app-client] (css) */
+.Button-module__dWMkza__button {
+  color: var(--gray-50);
+  background-color: var(--blue-500);
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+}
+
+.Button-module__dWMkza__button.Button-module__dWMkza__link {
+  text-decoration: none;
+}
+
+.Button-module__dWMkza__button.Button-module__dWMkza__small {
+  padding: 4px 12px;
+  font-size: 16px;
+}
+
+.Button-module__dWMkza__button:disabled {
+  background-color: var(--gray-400);
+  cursor: not-allowed;
+}
+
+.Button-module__dWMkza__button:disabled:hover, .Button-module__dWMkza__button:disabled:focus, .Button-module__dWMkza__button:disabled:active {
+  background-color: var(--gray-400);
+}
+
+.Button-module__dWMkza__button.Button-module__dWMkza__minimal {
+  background-color: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  color: var(--black-400);
+}
+
+.Button-module__dWMkza__button.Button-module__dWMkza__minimal:hover, .Button-module__dWMkza__button.Button-module__dWMkza__minimal:focus, .Button-module__dWMkza__button.Button-module__dWMkza__minimal:active {
+  background-color: var(--gray-50);
+  border-color: var(--gray-300);
+}
+
+.Button-module__dWMkza__button.Button-module__dWMkza__danger {
+  color: #fff;
+  background-color: #ce2637;
+}
+
+/*# sourceMappingURL=shared_components_Button_module_css_e59ae46c._.single.css.map*/

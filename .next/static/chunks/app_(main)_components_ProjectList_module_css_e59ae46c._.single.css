@@ -1,0 +1,33 @@
+/* [project]/app/(main)/components/ProjectList.module.css [app-client] (css) */
+.ProjectList-module__pHfn8q__projectList {
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.ProjectList-module__pHfn8q__projectListItemLink {
+  color: var(--black-400);
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 12px 16px;
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration: none;
+  display: flex;
+}
+
+.ProjectList-module__pHfn8q__projectListItemLink:hover, .ProjectList-module__pHfn8q__projectListItemLink.ProjectList-module__pHfn8q__active {
+  background-color: #f6f6f8;
+  border-radius: 4px;
+}
+
+.ProjectList-module__pHfn8q__projectIcon {
+  width: 16px;
+  height: 16px;
+}
+
+/*# sourceMappingURL=app_%28main%29_components_ProjectList_module_css_e59ae46c._.single.css.map*/

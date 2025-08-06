@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/(auth)/components/SocialButton.module.css"],"sourcesContent":["\n.socialButton {\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  background-color: #ddd;\n  padding: 12px;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.socialButtonImage {\n  width: 20px;\n  height: 20px;\n  object-fit: contain;\n}\n\n.google {\n  background-color: #FFF3F2;\n}\n\n.naver {\n  background-color: #EBF8F1;\n}\n\n.facebook {\n  background-color: #EAEFFD;\n}\n\n.kakao {\n  background-color: #FAF2E6;\n}\n"],"names":[],"mappings":"AACA;;;;;;;;;;;;AAYA;;;;;;AAMA;;;;AAIA;;;;AAIA;;;;AAIA"}}]
+}

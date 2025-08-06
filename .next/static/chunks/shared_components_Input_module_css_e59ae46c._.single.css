@@ -1,0 +1,40 @@
+/* [project]/shared/components/Input.module.css [app-client] (css) */
+.Input-module__ITmFJq__input {
+  --search-icon-size: 24px;
+  color: #333236;
+  border: 1px solid #888893;
+  border-radius: 8px;
+  outline: none;
+  padding: 8px 12px;
+  font-size: 16px;
+  transition: border-color .2s ease-in-out;
+}
+
+.Input-module__ITmFJq__input:focus {
+  border-color: #333236;
+}
+
+.Input-module__ITmFJq__input::placeholder {
+  color: #888893;
+}
+
+.Input-module__ITmFJq__input.Input-module__ITmFJq__search {
+  padding-left: calc(12px + var(--search-icon-size)  + 8px);
+  background-image: url("/assets/search.svg");
+  background-size: var(--search-icon-size);
+  background-position: 12px;
+  background-repeat: no-repeat;
+}
+
+.Input-module__ITmFJq__input.Input-module__ITmFJq__error {
+  border-color: #ff4500;
+}
+
+.Input-module__ITmFJq__errorMessage {
+  color: #ff4500;
+  margin: 4px 0 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=shared_components_Input_module_css_e59ae46c._.single.css.map*/

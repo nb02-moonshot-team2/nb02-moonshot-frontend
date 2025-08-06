@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/(main)/tasks/components/CalendarView.module.css"],"sourcesContent":[".container {\n  display: flex;\n  overflow-x: scroll;\n  position: relative;\n}\n\n.column {\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n  width: 300px;\n  flex-shrink: 0;\n  padding: 0 8px;\n  border-right: 1px solid #e5e5ea;\n}\n\n.column:first-child {\n  padding-left: 0;\n}\n\n.column:last-child {\n  border-right: none;\n  padding-right: 0;\n}\n\n.header {\n  border-radius: 8px;\n  padding: 4px 8px;\n  font-size: 16px;\n  font-weight: 500;\n  line-height: 27px;\n  color: #888893;\n  background-color: #e5e5ea;\n}\n\n.overlay {\n  position: absolute;\n  inset: 0;\n  padding-top: 42px;\n  display: grid;\n  grid-template-columns: calc(300px - 8px) repeat(5, calc(300px - 16px)) calc(\n      300px - 8px\n    );\n  grid-template-rows: repeat(auto-fill, 82px);\n  gap: 8px 16px;\n}\n"],"names":[],"mappings":"AAAA;;;;;;AAMA;;;;;;;;;;AAUA;;;;AAIA;;;;;AAKA;;;;;;;;;;AAUA"}}]
+}

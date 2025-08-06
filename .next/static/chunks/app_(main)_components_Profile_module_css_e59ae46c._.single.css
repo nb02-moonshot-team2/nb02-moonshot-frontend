@@ -1,0 +1,47 @@
+/* [project]/app/(main)/components/Profile.module.css [app-client] (css) */
+.Profile-module__4aIwyW__profile {
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  display: flex;
+}
+
+.Profile-module__4aIwyW__profileImage {
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}
+
+.Profile-module__4aIwyW__profileName {
+  color: #66666e;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.Profile-module__4aIwyW__menu {
+  background: #fff;
+  border: 1px solid #e5e5ea;
+  border-radius: 8px;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 112px;
+  padding: 4px;
+  display: flex;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+}
+
+.Profile-module__4aIwyW__menuItem {
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-weight: 500;
+  line-height: 27px;
+  text-decoration: none;
+}
+
+.Profile-module__4aIwyW__menuItem:hover, .Profile-module__4aIwyW__menuItem.Profile-module__4aIwyW__active {
+  background-color: #ededf0;
+}
+
+/*# sourceMappingURL=app_%28main%29_components_Profile_module_css_e59ae46c._.single.css.map*/

@@ -1,0 +1,43 @@
+/* [project]/app/(main)/projects/(projects)/[projectId]/components/DeleteProjectModal.module.css [app-client] (css) */
+.DeleteProjectModal-module__c4Km6W__modal {
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+}
+
+.DeleteProjectModal-module__c4Km6W__content {
+  flex-direction: column;
+  gap: 8px;
+  display: flex;
+}
+
+.DeleteProjectModal-module__c4Km6W__title {
+  color: #333236;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.DeleteProjectModal-module__c4Km6W__description {
+  word-break: keep-all;
+  color: #888893;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 27px;
+}
+
+.DeleteProjectModal-module__c4Km6W__form {
+  flex-direction: column;
+  gap: 24px;
+  display: flex;
+}
+
+.DeleteProjectModal-module__c4Km6W__button {
+  width: 100%;
+}
+
+/*# sourceMappingURL=6f537_%28projects%29_%5BprojectId%5D_components_DeleteProjectModal_module_css_e59ae46c._.single.css.map*/

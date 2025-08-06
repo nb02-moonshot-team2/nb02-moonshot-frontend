@@ -1,0 +1,59 @@
+/* [project]/app/(main)/projects/(projects)/[projectId]/components/FlexTable.module.css [app-client] (css) */
+.FlexTable-module__QJa8ca__table {
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  display: flex;
+}
+
+.FlexTable-module__QJa8ca__header, .FlexTable-module__QJa8ca__row {
+  gap: 24px;
+}
+
+.FlexTable-module__QJa8ca__header {
+  padding: 0 16px;
+}
+
+.FlexTable-module__QJa8ca__row {
+  background: #fff;
+  border: 1px solid #e5e5ea;
+  border-radius: 8px;
+  padding: 12px 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .02);
+}
+
+.FlexTable-module__QJa8ca__header {
+  color: #888893;
+  letter-spacing: -.3px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  display: flex;
+}
+
+.FlexTable-module__QJa8ca__row {
+  align-items: center;
+  display: flex;
+}
+
+.FlexTable-module__QJa8ca__cell {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.FlexTable-module__QJa8ca__cell.FlexTable-module__QJa8ca__align-center {
+  justify-content: center;
+}
+
+.FlexTable-module__QJa8ca__cell.FlexTable-module__QJa8ca__align-left {
+  justify-content: flex-start;
+}
+
+.FlexTable-module__QJa8ca__cell.FlexTable-module__QJa8ca__align-right {
+  justify-content: flex-end;
+}
+
+/*# sourceMappingURL=330cb_%28main%29_projects_%28projects%29_%5BprojectId%5D_components_FlexTable_module_css_e59ae46c._.single.css.map*/

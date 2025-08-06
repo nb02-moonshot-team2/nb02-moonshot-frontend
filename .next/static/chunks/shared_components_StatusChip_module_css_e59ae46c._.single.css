@@ -1,0 +1,27 @@
+/* [project]/shared/components/StatusChip.module.css [app-client] (css) */
+.StatusChip-module__Hsl1ZW__chip {
+  border-radius: 9999px;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 8px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.StatusChip-module__Hsl1ZW__chip.StatusChip-module__Hsl1ZW__status-todo {
+  color: #66666e;
+  background-color: #e5e5ea;
+}
+
+.StatusChip-module__Hsl1ZW__chip.StatusChip-module__Hsl1ZW__status-inProgress {
+  color: #2d38ba;
+  background-color: #e5e7ff;
+}
+
+.StatusChip-module__Hsl1ZW__chip.StatusChip-module__Hsl1ZW__status-done {
+  color: #00802b;
+  background-color: #d9f8de;
+}
+
+/*# sourceMappingURL=shared_components_StatusChip_module_css_e59ae46c._.single.css.map*/

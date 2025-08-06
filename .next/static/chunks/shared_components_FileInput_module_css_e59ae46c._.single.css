@@ -1,0 +1,57 @@
+/* [project]/shared/components/FileInput.module.css [app-client] (css) */
+.FileInput-module__coDAgG__container {
+  background: #f6f6f8;
+  border: 1px solid #e5e5ea;
+  border-radius: 8px;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  display: flex;
+}
+
+.FileInput-module__coDAgG__file {
+  background: #fff;
+  border: 1px solid #ededf0;
+  border-radius: 8px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  display: flex;
+}
+
+.FileInput-module__coDAgG__link {
+  text-decoration: none;
+}
+
+.FileInput-module__coDAgG__closeIcon {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.FileInput-module__coDAgG__fileName {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.FileInput-module__coDAgG__input {
+  display: none;
+}
+
+.FileInput-module__coDAgG__button {
+  color: #333236;
+  cursor: pointer;
+  background: #e5e5ea;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+/*# sourceMappingURL=shared_components_FileInput_module_css_e59ae46c._.single.css.map*/

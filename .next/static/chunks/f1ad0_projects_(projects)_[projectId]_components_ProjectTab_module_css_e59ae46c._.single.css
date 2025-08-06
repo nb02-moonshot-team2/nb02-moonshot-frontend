@@ -1,0 +1,108 @@
+/* [project]/app/(main)/projects/(projects)/[projectId]/components/ProjectTab.module.css [app-client] (css) */
+.ProjectTab-module__ytmqgG__container {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.ProjectTab-module__ytmqgG__tabs {
+  gap: 16px;
+  display: flex;
+  box-shadow: inset 0 -2px #888893;
+}
+
+.ProjectTab-module__ytmqgG__tab {
+  color: #888893;
+  cursor: pointer;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  padding: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-decoration: none;
+  transition: border-color .4s, color .1s;
+  display: inline-block;
+}
+
+.ProjectTab-module__ytmqgG__tab.ProjectTab-module__ytmqgG__active {
+  color: #333236;
+  border-bottom: 2px solid #333236;
+}
+
+.ProjectTab-module__ytmqgG__taskTabMenu {
+  align-items: center;
+  gap: 8px;
+  display: flex;
+}
+
+.ProjectTab-module__ytmqgG__searchIcon {
+  color: #888893;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.ProjectTab-module__ytmqgG__searchForm {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.ProjectTab-module__ytmqgG__searchInput {
+  width: 200px;
+}
+
+.ProjectTab-module__ytmqgG__createTaskButton {
+  color: #888893;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.ProjectTab-module__ytmqgG__assigneeDropdown {
+  width: 140px;
+}
+
+.ProjectTab-module__ytmqgG__modal {
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+}
+
+.ProjectTab-module__ytmqgG__modalTitle {
+  color: #333236;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.ProjectTab-module__ytmqgG__modalDescription {
+  word-break: keep-all;
+  color: #888893;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 27px;
+}
+
+.ProjectTab-module__ytmqgG__modalForm {
+  flex-direction: column;
+  gap: 24px;
+  display: flex;
+}
+
+.ProjectTab-module__ytmqgG__inputContainer {
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  display: flex;
+}
+
+.ProjectTab-module__ytmqgG__modalInput, .ProjectTab-module__ytmqgG__modalButton {
+  width: 100%;
+}
+
+/*# sourceMappingURL=f1ad0_projects_%28projects%29_%5BprojectId%5D_components_ProjectTab_module_css_e59ae46c._.single.css.map*/

@@ -17,6 +17,13 @@ const cx = classNames.bind(styles);
 
 const LoginPage = () => {
   const router = useRouter();
+  
+  // Google 로그인 핸들러
+  const handleGoogleLogin = () => {
+    const backendUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3001';
+    window.location.href = `${backendUrl}/auth/google`;
+  };
+
   const [state, dispatch, isPending] = useActionState(
     async (_: LoginInput, formData: FormData) => {
       const values: LoginInput = {
@@ -78,7 +85,10 @@ const LoginPage = () => {
         <p className={cx(styles.socialButtonTitle)}>SNS 간편 로그인</p>
         <div className={cx(styles.socialButtonContainer)}>
           <SocialButton provider={OAuthProvider.NAVER} />
-          <SocialButton provider={OAuthProvider.GOOGLE} />
+          <SocialButton 
+            provider={OAuthProvider.GOOGLE} 
+            onClick={handleGoogleLogin}
+          />
           <SocialButton provider={OAuthProvider.FACEBOOK} />
           <SocialButton provider={OAuthProvider.KAKAO} />
         </div>
