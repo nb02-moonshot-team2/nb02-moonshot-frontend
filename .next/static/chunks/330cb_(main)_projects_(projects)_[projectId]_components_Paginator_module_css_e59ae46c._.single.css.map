@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/(main)/projects/(projects)/[projectId]/components/Paginator.module.css"],"sourcesContent":[".wrapper {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n}\n\n.chevron {\n  width: 24px;\n  height: 24px;\n  cursor: pointer;\n  color: #333236;\n}\n\n.chevron.inactive {\n  color: #C2C3CD;\n  cursor: default;\n}\n\n.page {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  font-size: 14px;\n  font-weight: 500;\n  line-height: 24px;\n  width: 24px;\n  height: 24px;\n  cursor: pointer;\n  border-radius: 16px;\n  border: 1px solid #E5E5EA;\n  background: #FFF;\n  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.02);\n}\n\n.page.active {\n  border: 1px solid #FFF;\n  background: #333236;\n  color: #FFF;\n}"],"names":[],"mappings":"AAAA;;;;;;AAMA;;;;;;;AAOA;;;;;AAKA;;;;;;;;;;;;;;;;AAgBA"}}]
-}

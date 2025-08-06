@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/(main)/settings/components/SettingsForm.module.css"],"sourcesContent":[".innerContainer {\n  display: flex;\n  flex-direction: column;\n  gap: 24px;\n  max-width: 400px;\n}\n\n.title {\n  margin: 0;\n  color: #333236;\n  font-size: 28px;\n  font-weight: 700;\n  line-height: 40px;\n}\n\n.divider {\n  width: 100%;\n  height: 1px;\n  border: none;\n  border-bottom: 1px solid #ededf0;\n}\n\n.inputContainer {\n  margin-bottom: 20px;\n}\n\n.input,\n.button {\n  width: 100%;\n}\n"],"names":[],"mappings":"AAAA;;;;;;;AAOA;;;;;;;;AAQA;;;;;;;AAOA;;;;AAIA"}}]
-}

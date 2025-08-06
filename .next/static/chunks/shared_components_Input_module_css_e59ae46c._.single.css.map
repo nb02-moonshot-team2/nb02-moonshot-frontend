@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/shared/components/Input.module.css"],"sourcesContent":[".input {\n  --search-icon-size: 24px;\n}\n\n.input {\n  padding: 8px 12px;\n  color: #333236;\n  border-radius: 8px;\n  border: 1px solid #888893;\n  outline: none;\n  font-size: 16px;\n  transition: border-color 0.2s ease-in-out;\n}\n\n.input:focus {\n  border-color: #333236;\n}\n\n.input::placeholder {\n  color: #888893;\n}\n\n.input.search {\n  padding-left: calc(12px + var(--search-icon-size) + 8px);\n  background-image: url('/assets/search.svg');\n  background-size: var(--search-icon-size);\n  background-repeat: no-repeat;\n  background-position: 12px center;\n}\n\n.input.error {\n  border-color: #ff4500;\n}\n\n.errorMessage {\n  color: #ff4500;\n  font-size: 14px;\n  font-weight: 700;\n  margin: 4px 0 0 0;\n}\n"],"names":[],"mappings":"AAAA;;;;;;;;;;;AAcA;;;;AAIA;;;;AAIA;;;;;;;;AAQA;;;;AAIA"}}]
-}

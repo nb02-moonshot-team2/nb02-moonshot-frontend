@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/shared/components/TagInput.module.css"],"sourcesContent":[".input {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 4px;\n  align-items: center;\n  min-height: 45px;\n  position: relative;\n  padding: 8px 12px;\n  color: var(--black-50);\n  border-radius: 4px;\n  border: 1px solid var(--gray-200);\n  outline: none;\n  font-size: 16px;\n  transition: border-color 0.2s ease-in-out;\n}\n\n.input.isFocused {\n  border-color: var(--black-200);\n}\n\n.tag {\n  font-size: 14px;\n  color: #2D38BA;\n  font-weight: 400;\n  line-height: 27px;\n}\n\n.placeholder {\n  color: var(--gray-500);\n}\n\n.cursor {\n  display: inline-block;\n  min-width: 24px;\n  padding: 0 4px;\n  border: none;\n  outline: none;\n  background-color: transparent;\n  position: absolute;\n  inset: 0;\n  z-index: 1;\n}\n\n.hiddenSpan {\n  opacity: 0;\n  padding: 0 4px;\n}\n"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;AAgBA;;;;AAIA;;;;;;;AAOA;;;;AAIA;;;;;;;;;;;;;;;AAYA"}}]
-}

@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/shared/components/StatusChip.module.css"],"sourcesContent":[".chip {\n  width: fit-content;\n  border-radius: 9999px;\n  padding: 0 8px;\n  font-size: 13px;\n  font-weight: 500;\n  line-height: 21px;\n}\n\n.chip.status-todo {\n  background-color: #e5e5ea;\n  color: #66666e;\n}\n\n.chip.status-inProgress {\n  background-color: #e5e7ff;\n  color: #2d38ba;\n}\n\n.chip.status-done {\n  background-color: #d9f8de;\n  color: #00802b;\n}\n"],"names":[],"mappings":"AAAA;;;;;;;;;;AASA;;;;;AAKA;;;;;AAKA"}}]
-}

@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/(main)/tasks/components/TaskItem.module.css"],"sourcesContent":[".task {\n  border-radius: 8px;\n  border: 1px solid #ededf0;\n  background: #fff;\n  padding: 12px 16px;\n}\n\n.title {\n  color: #333236;\n  font-size: 16px;\n  font-weight: 700;\n  line-height: 27px;\n  display: flex;\n  align-items: center;\n  gap: 8px;\n}\n\n.link {\n  text-decoration: none;\n  color: inherit;\n}\n\n.metadata {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  color: #888893;\n  font-size: 16px;\n  font-weight: 500;\n  line-height: 27px;\n}\n\n.metadata .date {\n  flex-shrink: 0;\n}\n\n.metadata .divider {\n  width: 1px;\n  height: 16px;\n  border-right: 1px solid #ededf0;\n}\n\n.assignee {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n"],"names":[],"mappings":"AAAA;;;;;;;AAOA;;;;;;;;;;AAUA;;;;;AAKA;;;;;;;;;;AAUA;;;;AAIA;;;;;;AAMA"}}]
-}

@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/(auth)/shared.module.css"],"sourcesContent":[".container {\n  display: flex;\n  flex-direction: column;\n  gap: 32px;\n}\n\n.title {\n  margin: 0;\n}\n\n.form {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n}\n\n.inputContainer {\n  display: flex;\n  flex-direction: column;\n  gap: 4px;\n}\n\n.linkContainer {\n  text-align: center;\n}\n\n.socialLoginContainer {\n  display: flex;\n  gap: 32px;\n  justify-content: center;\n  align-items: center;\n}\n\n.socialButtonContainer {\n  display: flex;\n  gap: 16px;\n  justify-content: center;\n  align-items: center;\n}\n"],"names":[],"mappings":"AAAA;;;;;;AAMA;;;;AAIA;;;;;;AAMA;;;;;;AAMA;;;;AAIA;;;;;;;AAOA"}}]
-}

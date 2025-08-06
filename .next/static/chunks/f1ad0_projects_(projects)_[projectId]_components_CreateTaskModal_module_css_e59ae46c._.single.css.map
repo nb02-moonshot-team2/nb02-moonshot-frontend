@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/(main)/projects/(projects)/[projectId]/components/CreateTaskModal.module.css"],"sourcesContent":[".modal {\n  display: flex;\n  flex-direction: column;\n  gap: 24px;\n  width: 100%;\n  max-width: 360px;\n}\n\n.title {\n  margin: 0;\n  color: #333236;\n  font-size: 20px;\n  font-weight: 700;\n  line-height: 32px;\n}\n\n.form {\n  display: flex;\n  flex-direction: column;\n  gap: 24px;\n}\n\n.inputContainer {\n  display: flex;\n  flex-direction: column;\n  gap: 4px;\n}\n\n.twoColumn {\n  display: flex;\n  gap: 24px;\n}\n\n.twoColumn>.inputContainer {\n  flex-grow: 1;\n  width: 0;\n}\n\n.twoColumn>.inputContainer>.input {\n  width: 100%;\n  min-width: 0;\n}\n\n.input,\n.button {\n  width: 100%;\n}"],"names":[],"mappings":"AAAA;;;;;;;;AAQA;;;;;;;;AAQA;;;;;;AAMA;;;;;;AAMA;;;;;AAKA;;;;;AAKA;;;;;AAKA"}}]
-}

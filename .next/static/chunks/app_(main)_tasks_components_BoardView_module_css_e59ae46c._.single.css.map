@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/(main)/tasks/components/BoardView.module.css"],"sourcesContent":[".container {\n  display: flex;\n  min-height: 600px;\n}\n\n.column {\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n  width: 300px;\n  padding: 0 8px;\n  border-right: 1px solid #e5e5ea;\n}\n\n.column:first-child {\n  padding-left: 0;\n}\n\n.column:last-child {\n  border-right: none;\n  padding-right: 0;\n}\n\n.header {\n  border-radius: 8px;\n  padding: 4px 8px;\n  font-size: 16px;\n  font-weight: 500;\n  line-height: 27px;\n}\n\n.header.todo {\n  color: #66666e;\n  background-color: #e5e5ea;\n}\n\n.header.inProgress {\n  color: #2d38ba;\n  background-color: #e5e7ff;\n}\n\n.header.done {\n  color: #00802b;\n  background-color: #d9f8de;\n}\n"],"names":[],"mappings":"AAAA;;;;;AAKA;;;;;;;;;AASA;;;;AAIA;;;;;AAKA;;;;;;;;AAQA;;;;;AAKA;;;;;AAKA"}}]
-}

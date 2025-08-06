@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/(main)/components/GNB.module.css"],"sourcesContent":[".nav {\n  display: flex;\n  flex-direction: column;\n  border-bottom: 1px solid var(--gray-100);\n  background-color: var(--gray-50);\n  padding: 24px 16px;\n}\n\n.divider {\n  width: 100%;\n  height: 1px;\n  border: none;\n  border-bottom: 1px solid #e5e5ea;\n  margin: 8px 0;\n}\n\n.logo {\n  height: 16px;\n  margin-bottom: 16px;\n}\n\n.menuLink {\n  font-size: 13px;\n  line-height: 21px;\n  margin: 0;\n  text-decoration: none;\n  color: #66666e;\n  padding: 8px 16px;\n}\n\n.projectMenuLink {\n  font-size: 13px;\n  line-height: 21px;\n  margin: 0;\n  text-decoration: none;\n  color: #66666e;\n  padding: 8px 16px;\n}\n\n.menuLink:hover,\n.menuLink.active {\n  border-radius: 4px;\n  background-color: #f6f6f8;\n}\n\n.projectHeader {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.profile {\n  position: sticky;\n  bottom: 0;\n  margin-top: auto;\n  padding: 8px 16px;\n}\n"],"names":[],"mappings":"AAAA;;;;;;;;AAQA;;;;;;;;AAQA;;;;;AAKA;;;;;;;;;AAkBA;;;;;AAMA;;;;;;AAMA"}}]
-}

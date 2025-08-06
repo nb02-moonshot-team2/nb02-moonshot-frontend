@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/(main)/components/Profile.module.css"],"sourcesContent":[".profile {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  text-decoration: none;\n}\n\n.profileImage {\n  width: 24px;\n  height: 24px;\n  border-radius: 50%;\n}\n\n.profileName {\n  font-size: 13px;\n  font-weight: 700;\n  color: #66666e;\n}\n\n.menu {\n  min-width: 112px;\n  border-radius: 8px;\n  border: 1px solid #e5e5ea;\n  background: #fff;\n  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);\n  padding: 4px;\n  display: flex;\n  flex-direction: column;\n  gap: 4px;\n}\n\n.menuItem {\n  padding: 4px 8px;\n  border-radius: 4px;\n  cursor: pointer;\n  line-height: 27px;\n  text-align: center;\n  text-decoration: none;\n  font-weight: 500;\n}\n\n.menuItem:hover,\n.menuItem.active {\n  background-color: #ededf0;\n}\n"],"names":[],"mappings":"AAAA;;;;;;;AAOA;;;;;;AAMA;;;;;;AAMA;;;;;;;;;;;;AAYA;;;;;;;;;;AAUA"}}]
-}

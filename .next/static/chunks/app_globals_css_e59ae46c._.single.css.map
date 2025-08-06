@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/globals.css"],"sourcesContent":[":root {\n  --black-500: #040404;\n  --black-400: #1f1f1f;\n  --black-300: #373737;\n  --black-200: #525252;\n  --black-100: #6b6b6b;\n  --gray-500: #999;\n  --gray-400: #ababab;\n  --gray-300: #c4c4c4;\n  --gray-200: #e0e0e0;\n  --gray-100: #e9e9e9;\n  --gray-50: #fff;\n\n  --blue-500: #2634ce;\n  --green-100: #cdfeeb;\n  --green-50: #eafff7;\n\n  --red-400: #d01a29;\n}\n\n* {\n  box-sizing: border-box;\n}\n\nbody {\n  margin: 0;\n}\n\nhtml {\n  font-family: 'Spoqa Han Sans Neo', sans-serif;\n  font-size: 16px;\n  color: #333236;\n}\n\na {\n  color: var(--black-500);\n  font-weight: 700;\n}\n"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;AAoBA;;;;AAIA;;;;AAIA;;;;;;AAMA"}}]
-}

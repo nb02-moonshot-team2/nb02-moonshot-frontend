@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/shared/components/ImageInput.module.css"],"sourcesContent":[".hiddenInput {\n  display: none;\n}\n\n.container {\n  margin-top: 8px;\n}\n\n.container.preview {\n  width: 80px;\n  height: 80px;\n  position: relative;\n  border-radius: 8px;\n}\n\n.container.blank {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n}\n\n.container.blank > .image {\n  flex-grow: 0;\n}\n\n.image {\n  width: 80px;\n  height: 80px;\n  border-radius: 8px;\n  border: 1px solid #dddee4;\n  aspect-ratio: 1 / 1;\n  object-fit: cover;\n  overflow: hidden;\n}\n\n\n.removeButton {\n  position: absolute;\n  width: 20px;\n  height: 20px;\n  top: 0;\n  right: 0;\n  transform: translate(50%, -50%);\n  z-index: 1;\n  cursor: pointer;\n}\n"],"names":[],"mappings":"AAAA;;;;AAIA;;;;AAIA;;;;;;;AAOA;;;;;;AAMA;;;;AAIA;;;;;;;;;;AAWA"}}]
-}
