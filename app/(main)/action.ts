@@ -19,9 +19,8 @@ export const getMe = async (): Promise<ActionResult<User>> => {
       success: '회원 정보 조회 성공',
       data: user,
       error: null,
-    }
+    };
   } catch (error) {
-    console.log(error);
     return {
       success: null,
       error:
