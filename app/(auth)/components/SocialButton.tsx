@@ -15,9 +15,18 @@ const SOCIAL_BUTTON_IMAGE_MAP = {
   [OAuthProvider.FACEBOOK]: FacebookImage,
 };
 
-const SocialButton = ({ provider }: { provider: OAuthProvider }) => {
+interface SocialButtonProps {
+  provider: OAuthProvider;
+  onClick?: () => void;
+}
+
+const SocialButton = ({ provider, onClick }: SocialButtonProps) => {
   return (
-    <div className={cx(styles.socialButton, provider)}>
+    <div 
+      className={cx(styles.socialButton, provider)}
+      onClick={onClick}
+      style={{ cursor: 'pointer' }}
+    >
       <Image
         className={cx(styles.socialButtonImage)}
         src={SOCIAL_BUTTON_IMAGE_MAP[provider]}
