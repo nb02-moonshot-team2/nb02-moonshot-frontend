@@ -20,7 +20,7 @@ const LoginPage = () => {
   
   // Google 로그인 핸들러
   const handleGoogleLogin = () => {
-    const backendUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3001';
+    const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
     window.location.href = `${backendUrl}/auth/google`;
   };
 
