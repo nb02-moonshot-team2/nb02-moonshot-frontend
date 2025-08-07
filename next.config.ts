@@ -1,16 +1,16 @@
-import type { NextConfig } from 'next';
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: '/',
-        destination: '/projects',
+        source: "/",
+        destination: "/projects",
         permanent: false,
       },
       {
-        source: '/projects/:projectId',
-        destination: '/projects/:projectId/tasks',
+        source: "/projects/:projectId",
+        destination: "/projects/:projectId/tasks",
         permanent: false,
       },
     ];
@@ -18,21 +18,30 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: '*',
+        // API(Deployment)
+        protocol: "https",
+        hostname: "*",
       },
       {
-        protocol: 'http',
-        hostname: '*',
+        // API(LOCAL)
+        protocol: "http",
+        hostname: "localhost",
+        port: "4000",
+      },
+      {
+        // FIREBASE
+        protocol: "https",
+        hostname: "storage.googleapis.com",
+        pathname: "/codeit-beginner-project.firebasestorage.app/**",
       },
     ],
   },
 
   turbopack: {
     rules: {
-      '*.svg': {
-        loaders: ['@svgr/webpack'],
-        as: '*.js',
+      "*.svg": {
+        loaders: ["@svgr/webpack"],
+        as: "*.js",
       },
     },
   },
@@ -40,7 +49,7 @@ const nextConfig: NextConfig = {
   webpack: (config) => {
     // @ts-expect-error 타입 에러 무시
     const fileLoaderRule = config.module.rules.find((rule) =>
-      rule.test?.test?.('.svg')
+      rule.test?.test?.(".svg")
     );
 
     config.module.rules.push(
@@ -55,10 +64,10 @@ const nextConfig: NextConfig = {
         resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] },
         use: [
           {
-            loader: '@svgr/webpack',
+            loader: "@svgr/webpack",
             options: {
               typescript: true,
-              ext: 'tsx',
+              ext: "tsx",
             },
           },
         ],
