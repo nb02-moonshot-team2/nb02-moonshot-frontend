@@ -346,7 +346,7 @@ export const getSubTasksByTaskId = async (
 ): Promise<SubTask[]> => {
   try {
     const response = await axios.get(`/tasks/${taskId}/subtasks`);
-    return response.data;
+    return response.data.data;
   } catch (error) {
     logError(error);
     if (error instanceof AxiosError) {
