@@ -27,14 +27,14 @@ const TaskListPage = async ({
   }>;
   searchParams: Promise<{
     page?: number;
-    order_by?: 'created_at' | 'end_date' | 'title';
+    orderBy?: 'createdAt' | 'endDate' | 'title';
     status?: TaskStatus;
     assignee?: number;
     keyword?: string;
   }>;
 }) => {
   const { projectId: projectIdString } = await params;
-  const { order_by, status, assignee, keyword, page } = await searchParams;
+  const { orderBy, status, assignee, keyword, page } = await searchParams;
   const projectId = Number(projectIdString);
   if (isNaN(projectId)) {
     return redirect('/projects');
@@ -42,7 +42,7 @@ const TaskListPage = async ({
   const { data } = await getTasksByProjectId(projectId, {
     page: page ?? 1,
     limit: PAGE_SIZE,
-    order_by,
+    orderBy,
     status,
     assignee,
     keyword,
