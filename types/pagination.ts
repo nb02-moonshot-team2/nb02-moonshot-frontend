@@ -3,7 +3,7 @@ import { TaskStatus } from "./TaskStatus";
 export interface PaginationOption {
   page: number;
   limit: number;
-  order_by?: string;
+  orderBy?: string;
   order?: "asc" | "desc";
   keyword?: string;
 }
@@ -15,7 +15,7 @@ export interface PaginationResponse<T> {
 
 export interface FindByTasksByProjectIdPaginationOption
   extends PaginationOption {
-  order_by?: "createdAt" | "endDate" | "name";
+  orderBy?: "createdAt" | "endDate" | "name";
   status?: TaskStatus;
   assignee?: number;
   fromStartDate?: Date;

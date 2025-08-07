@@ -38,7 +38,7 @@ export const getMyProjectsWithCounts = async (): Promise<
   let projects: ProjectWithCounts[];
   try {
     const result = await api.getMyProjectsWithCounts({
-      orderBy: 'created_at',
+      orderBy: 'createdAt',
       order: 'desc',
     });
     projects = result.data;

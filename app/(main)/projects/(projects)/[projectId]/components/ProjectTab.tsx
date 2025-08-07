@@ -65,7 +65,7 @@ const TaskTabMenu = ({
 
   const handleSortChange = (value: string) => {
     const searchParams = new URLSearchParams(params);
-    searchParams.set("order_by", value);
+    searchParams.set("orderBy", value);
     searchParams.delete("page");
     router.push(`?${searchParams.toString()}`);
   };
@@ -107,7 +107,7 @@ const TaskTabMenu = ({
         options={[
           {
             label: "생성순",
-            value: "created_at",
+            value: "createdAt",
           },
           {
             label: "이름순",
@@ -115,10 +115,10 @@ const TaskTabMenu = ({
           },
           {
             label: "기한임박순",
-            value: "end_date",
+            value: "endDate",
           },
         ]}
-        value={params.get("order_by") || ""}
+        value={params.get("orderBy") || ""}
         onChange={handleSortChange}
       />
       <Dropdown

@@ -120,7 +120,7 @@ export const getMyProjectsWithCounts = async ({
   orderBy,
   order,
 }: {
-  orderBy?: 'created_at' | 'name';
+  orderBy?: 'createdAt' | 'name';
   order?: 'asc' | 'desc';
 }): Promise<PaginationResponse<ProjectWithCounts>> => {
   try {
@@ -246,7 +246,7 @@ export const removeMember = async (projectId: number, userId: number) => {
 };
 
 export interface GetTasksByProjectIdParams {
-  order_by?: 'created_at' | 'end_date' | 'title';
+  orderBy?: 'createdAt' | 'endDate' | 'title';
   status?: TaskStatus;
   assignee?: number;
   from?: Date;
