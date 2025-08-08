@@ -6,6 +6,7 @@ import CreateProject from "./components/CreateProject";
 import { ProjectWithCounts } from "@/types/entities";
 import Link from "next/link";
 import { getMyProjectsWithCounts } from "./actions";
+import InvitationsPanel from "./[projectId]/components/InvitationsPanel";
 const cx = classNames.bind(styles);
 
 const ProjectListItem = ({ project }: { project: ProjectWithCounts }) => {
@@ -82,6 +83,7 @@ const MyProjectListPage = async ({
         <h1 className={cx(styles.title)}>프로젝트 목록</h1>
         <SortButton />
       </div>
+      <InvitationsPanel />
       <ProjectList projects={projectsWithCounts ?? []} />
     </div>
   );

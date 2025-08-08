@@ -6,6 +6,7 @@ import MoreMenu from './components/MoreMenu';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import ProjectTab from './components/ProjectTab';
+import AcceptInvitationBanner from './components/AcceptInvitationBanner';
 import { getProjectById } from '@/app/(main)/projects/actions';
 import { Project } from '@/types/entities';
 import { getProjectUsers } from './members/actions';
@@ -45,23 +46,24 @@ const ProjectLayout = async ({
   const members = paginationResponse?.data ?? [];
 
   return (
-    <div className={cx('wrapper')}>
-      <div className={cx('breadcrumb')}>
-        <Link className={cx('link')} href="/projects">
-          <ChevronLeft className={cx('chevron')} /> 목록으로
+    <div className={cx("wrapper")}>
+      <div className={cx("breadcrumb")}>
+        <Link className={cx("link")} href="/projects">
+          <ChevronLeft className={cx("chevron")} /> 목록으로
         </Link>
       </div>
-      <div className={cx('container')}>
-        <div className={cx('header')}>
+      <div className={cx("container")}>
+        <div className={cx("header")}>
           <ProjectIcon
-            className={cx('projectIcon')}
+            className={cx("projectIcon")}
             projectId={projectId}
             name={project!.name}
           />
-          <h1 className={cx('title')}>{project!.name}</h1>
-          <p className={cx('description')}>{project!.description}</p>
-          <MoreMenu className={cx('moreMenu')} project={project} />
+          <h1 className={cx("title")}>{project!.name}</h1>
+          <p className={cx("description")}>{project!.description}</p>
+          <MoreMenu className={cx("moreMenu")} project={project} />
         </div>
+        <AcceptInvitationBanner projectId={projectId} />
         <ProjectTab projectId={projectId} members={members} />
         {children}
       </div>

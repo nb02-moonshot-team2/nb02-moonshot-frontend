@@ -1,6 +1,6 @@
-import { AxiosError } from 'axios';
-import { axios } from './axios';
-import { PaginationResponse, FindMyTasksQuery } from '@/types/pagination';
+import { AxiosError } from "axios";
+import { axios } from "./axios";
+import { PaginationResponse, FindMyTasksQuery } from "@/types/pagination";
 import {
   Comment,
   Project,
@@ -10,8 +10,16 @@ import {
   UpdateTaskPayload,
   User,
   UserWithCounts,
-} from '@/types/entities';
-import { TaskStatus } from '@/types/TaskStatus';
+} from "@/types/entities";
+import { TaskStatus } from "@/types/TaskStatus";
+
+export type MyInvitations = {
+  id: number; // invitation PK (수락에 사용)
+  status: "pending" | "accepted" | "rejected";
+  projectId: number;
+  invitedAt: Date;
+  project: { id: number; name: string; description: string | null };
+};
 
 const logError = (error: unknown) => {
   if (error instanceof AxiosError) {
@@ -29,13 +37,13 @@ const logError = (error: unknown) => {
 
 export const login = async (payload: { email: string; password: string }) => {
   try {
-    const response = await axios.post('/auth/login', payload);
+    const response = await axios.post("/auth/login", payload);
     return response.data;
   } catch (error) {
     logError(error);
     if (error instanceof AxiosError) {
       throw new Error(
-        error.response?.data.message ?? '로그인 중 오류가 발생했습니다.'
+        error.response?.data.message ?? "로그인 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -49,13 +57,13 @@ export const register = async (payload: {
   profileImage: string | null;
 }) => {
   try {
-    const response = await axios.post('/auth/register', payload);
+    const response = await axios.post("/auth/register", payload);
     return response.data;
   } catch (error) {
     logError(error);
     if (error instanceof AxiosError) {
       throw new Error(
-        error.response?.data.message ?? '회원가입 중 오류가 발생했습니다.'
+        error.response?.data.message ?? "회원가입 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -64,7 +72,7 @@ export const register = async (payload: {
 
 export const refreshToken = async (refreshToken: string | null) => {
   try {
-    const response = await axios.post('/auth/refresh', {
+    const response = await axios.post("/auth/refresh", {
       headers: {
         Authorization: `Bearer ${refreshToken}`,
       },
@@ -74,7 +82,7 @@ export const refreshToken = async (refreshToken: string | null) => {
     logError(error);
     if (error instanceof AxiosError) {
       throw new Error(
-        error.response?.data.message ?? '토큰 갱신 중 오류가 발생했습니다.'
+        error.response?.data.message ?? "토큰 갱신 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -83,13 +91,13 @@ export const refreshToken = async (refreshToken: string | null) => {
 
 export const getMe = async (): Promise<User> => {
   try {
-    const response = await axios.get('/users/me');
+    const response = await axios.get("/users/me");
     return response.data;
   } catch (error) {
     logError(error);
     if (error instanceof AxiosError) {
       throw new Error(
-        error.response?.data.message ?? '내 정보 조회 중 오류가 발생했습니다.'
+        error.response?.data.message ?? "내 정보 조회 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -103,13 +111,13 @@ export const updateMe = async (payload: {
   newPassword?: string;
 }): Promise<User> => {
   try {
-    const response = await axios.patch('/users/me', payload);
+    const response = await axios.patch("/users/me", payload);
     return response.data;
   } catch (error) {
     logError(error);
     if (error instanceof AxiosError) {
       throw new Error(
-        error.response?.data.message ?? '내 정보 수정 중 오류가 발생했습니다.'
+        error.response?.data.message ?? "내 정보 수정 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -120,11 +128,11 @@ export const getMyProjectsWithCounts = async ({
   orderBy,
   order,
 }: {
-  orderBy?: 'createdAt' | 'name';
-  order?: 'asc' | 'desc';
+  orderBy?: "createdAt" | "name";
+  order?: "asc" | "desc";
 }): Promise<PaginationResponse<ProjectWithCounts>> => {
   try {
-    const response = await axios.get('/users/me/projects', {
+    const response = await axios.get("/users/me/projects", {
       params: {
         order_by: orderBy,
         order,
@@ -136,7 +144,7 @@ export const getMyProjectsWithCounts = async ({
     if (error instanceof AxiosError) {
       throw new Error(
         error.response?.data.message ??
-          '내 프로젝트 조회 중 오류가 발생했습니다.'
+          "내 프로젝트 조회 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -148,13 +156,13 @@ export const createProject = async (payload: {
   description: string;
 }): Promise<Project> => {
   try {
-    const response = await axios.post('/projects', payload);
+    const response = await axios.post("/projects", payload);
     return response.data;
   } catch (error) {
     logError(error);
     if (error instanceof AxiosError) {
       throw new Error(
-        error.response?.data.message ?? '프로젝트 생성 중 오류가 발생했습니다.'
+        error.response?.data.message ?? "프로젝트 생성 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -169,7 +177,7 @@ export const getProjectById = async (projectId: number): Promise<Project> => {
     logError(error);
     if (error instanceof AxiosError) {
       throw new Error(
-        error.response?.data.message ?? '프로젝트 조회 중 오류가 발생했습니다.'
+        error.response?.data.message ?? "프로젝트 조회 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -210,7 +218,7 @@ export const getProjectUsers = async (
     if (error instanceof AxiosError) {
       throw new Error(
         error.response?.data.message ??
-          '프로젝트 사용자 조회 중 오류가 발생했습니다.'
+          "프로젝트 사용자 조회 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -224,7 +232,7 @@ export const inviteMember = async (projectId: number, email: string) => {
     logError(error);
     if (error instanceof AxiosError) {
       throw new Error(
-        error.response?.data.message ?? '멤버 초대 중 오류가 발생했습니다.'
+        error.response?.data.message ?? "멤버 초대 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -238,7 +246,7 @@ export const removeMember = async (projectId: number, userId: number) => {
     logError(error);
     if (error instanceof AxiosError) {
       throw new Error(
-        error.response?.data.message ?? '멤버 제외 중 오류가 발생했습니다.'
+        error.response?.data.message ?? "멤버 제외 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -246,7 +254,7 @@ export const removeMember = async (projectId: number, userId: number) => {
 };
 
 export interface GetTasksByProjectIdParams {
-  orderBy?: 'createdAt' | 'endDate' | 'title';
+  orderBy?: "createdAt" | "endDate" | "title";
   status?: TaskStatus;
   assignee?: number;
   from?: Date;
@@ -269,7 +277,7 @@ export const getTasksByProjectId = async (
     logError(error);
     if (error instanceof AxiosError) {
       throw new Error(
-        error.response?.data.message ?? '프로젝트 조회 중 오류가 발생했습니다.'
+        error.response?.data.message ?? "프로젝트 조회 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -297,7 +305,7 @@ export const createTask = async (payload: {
     logError(error);
     if (error instanceof AxiosError) {
       throw new Error(
-        error.response?.data.message ?? '할 일 생성 중 오류가 발생했습니다.'
+        error.response?.data.message ?? "할 일 생성 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -312,7 +320,7 @@ export const getTaskById = async (taskId: number): Promise<Task> => {
     logError(error);
     if (error instanceof AxiosError) {
       throw new Error(
-        error.response?.data.message ?? '할 일 조회 중 오류가 발생했습니다.'
+        error.response?.data.message ?? "할 일 조회 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -330,7 +338,7 @@ export const updateTask = async (
     logError(error);
     if (error instanceof AxiosError) {
       throw new Error(
-        error.response?.data.message ?? '할 일 수정 중 오류가 발생했습니다.'
+        error.response?.data.message ?? "할 일 수정 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -352,7 +360,7 @@ export const getSubTasksByTaskId = async (
     if (error instanceof AxiosError) {
       throw new Error(
         error.response?.data.message ??
-          '하위 할 일 목록 조회 중 오류가 발생했습니다.'
+          "하위 할 일 목록 조회 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -373,7 +381,7 @@ export const createSubTask = async (
     if (error instanceof AxiosError) {
       throw new Error(
         error.response?.data.message ??
-          '하위 할 일 생성 중 오류가 발생했습니다.'
+          "하위 할 일 생성 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -395,7 +403,7 @@ export const updateSubTask = async (
     if (error instanceof AxiosError) {
       throw new Error(
         error.response?.data.message ??
-          '하위 할 일 수정 중 오류가 발생했습니다.'
+          "하위 할 일 수정 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -410,7 +418,7 @@ export const deleteSubtask = async (subtaskId: number) => {
     if (error instanceof AxiosError) {
       throw new Error(
         error.response?.data.message ??
-          '하위 할 일 삭제 중 오류가 발생했습니다.'
+          "하위 할 일 삭제 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -427,7 +435,7 @@ export const getCommentsByTaskId = async (
     logError(error);
     if (error instanceof AxiosError) {
       throw new Error(
-        error.response?.data.message ?? '댓글 조회 중 오류가 발생했습니다.'
+        error.response?.data.message ?? "댓글 조회 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -447,7 +455,7 @@ export const createComment = async (
     logError(error);
     if (error instanceof AxiosError) {
       throw new Error(
-        error.response?.data.message ?? '댓글 생성 중 오류가 발생했습니다.'
+        error.response?.data.message ?? "댓글 생성 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -467,7 +475,7 @@ export const updateComment = async (
     logError(error);
     if (error instanceof AxiosError) {
       throw new Error(
-        error.response?.data.message ?? '댓글 수정 중 오류가 발생했습니다.'
+        error.response?.data.message ?? "댓글 수정 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -481,7 +489,7 @@ export const deleteComment = async (commentId: number) => {
     logError(error);
     if (error instanceof AxiosError) {
       throw new Error(
-        error.response?.data.message ?? '댓글 삭제 중 오류가 발생했습니다.'
+        error.response?.data.message ?? "댓글 삭제 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -490,7 +498,7 @@ export const deleteComment = async (commentId: number) => {
 
 export const getMyTasks = async (params: FindMyTasksQuery): Promise<Task[]> => {
   try {
-    const response = await axios.get('/users/me/tasks', {
+    const response = await axios.get("/users/me/tasks", {
       params,
     });
     return response.data;
@@ -498,7 +506,7 @@ export const getMyTasks = async (params: FindMyTasksQuery): Promise<Task[]> => {
     logError(error);
     if (error instanceof AxiosError) {
       throw new Error(
-        error.response?.data.message ?? '할 일 조회 중 오류가 발생했습니다.'
+        error.response?.data.message ?? "할 일 조회 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -508,16 +516,16 @@ export const getMyTasks = async (params: FindMyTasksQuery): Promise<Task[]> => {
 export const uploadFiles = async (files: File[]): Promise<string[]> => {
   const formData = new FormData();
   files.forEach((file) => {
-    formData.append('files', file);
+    formData.append("files", file);
   });
   try {
-    const response = await axios.postForm('/files', formData);
+    const response = await axios.postForm("/files", formData);
     return response.data;
   } catch (error) {
     logError(error);
     if (error instanceof AxiosError) {
       throw new Error(
-        error.response?.data.message ?? '파일 업로드 중 오류가 발생했습니다.'
+        error.response?.data.message ?? "파일 업로드 중 오류가 발생했습니다."
       );
     }
     throw error;
@@ -531,9 +539,50 @@ export const removeInvitation = async (invitationId: string) => {
     logError(error);
     if (error instanceof AxiosError) {
       throw new Error(
-        error.response?.data.message ?? '초대 취소 중 오류가 발생했습니다.'
+        error.response?.data.message ?? "초대 취소 중 오류가 발생했습니다."
       );
     }
     throw error;
+  }
+};
+
+// 초대받은 목록
+export const getMyInvitations = async (params?: {
+  status?: "pending" | "accepted" | "rejected" | "all";
+  page?: number;
+  limit?: number;
+}): Promise<PaginationResponse<MyInvitations>> => {
+  try {
+    const response = await axios.get(`/invitations/me`, {
+      params: {
+        status: params?.status ?? "pending",
+        page: params?.page ?? 1,
+        limit: params?.limit ?? 10,
+      },
+    });
+
+    return response.data;
+  } catch (error) {
+    logError(error);
+    if (error instanceof AxiosError) {
+      throw new Error(
+        error.response?.data.message ?? "초대 목록 조회 중 오류가 발생했습니다."
+      );
+    }
+    throw error;
+  }
+};
+
+// 초대 수락
+export const acceptInvitation = async (invitationId: number) => {
+  try {
+    await axios.post(`/invitations/${invitationId}/accept`);
+  } catch (error) {
+    logError(error);
+    if (error instanceof AxiosError) {
+      throw new Error(
+        error.response?.data.message ?? "초대 수락 중 오류가 발생했습니다."
+      );
+    }
   }
 };
