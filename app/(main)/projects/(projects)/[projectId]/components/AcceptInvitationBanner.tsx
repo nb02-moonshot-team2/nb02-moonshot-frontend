@@ -4,6 +4,7 @@ import {
   MyInvitation,
   getMyInvitationsClient,
   acceptInvitationClient,
+  rejectInvitationClient,
 } from "./invitations.client";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
@@ -14,7 +15,8 @@ export default function AcceptInvitationBanner({
   projectId: number;
 }) {
   const router = useRouter();
-  const [loading, setLoading] = useState(false);
+  const [accepting, setAccepting] = useState(false);
+  const [rejecting, setRejecting] = useState(false);
   const [invite, setInvite] = useState<MyInvitation | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -40,7 +42,7 @@ export default function AcceptInvitationBanner({
   const onAccept = async () => {
     if (!invite) return;
     try {
-      setLoading(true);
+      setAccepting(true);
       await acceptInvitationClient(invite.id);
       toast.success("초대 수락 완료");
       setInvite({ ...invite, status: "accepted" });
@@ -48,7 +50,7 @@ export default function AcceptInvitationBanner({
     } catch (e: any) {
       toast.error(e?.message ?? "초대 수락에 실패했습니다.");
     } finally {
-      setLoading(false);
+      setAccepting(false);
     }
   };
 
@@ -57,6 +59,26 @@ export default function AcceptInvitationBanner({
   }
 
   // 이 프로젝트에 pending 초대가 없으면 렌더 X
+  if (!invite || invite.status !== "pending") return null;
+
+  const onReject = async () => {
+    if (!invite) return;
+    if (!confirm("이 초대를 거절할까요?")) return;
+
+    try {
+      setRejecting(true);
+      await rejectInvitationClient(invite.id);
+      toast.success("초대를 거절했어요");
+      setInvite(null); // or setInvite({ ...invite, status: "rejected" })
+      router.refresh();
+    } catch (e: any) {
+      toast.error(e?.message ?? "초대 거절에 실패했습니다.");
+    } finally {
+      setRejecting(false);
+    }
+  };
+
+  if (error) return null;
   if (!invite || invite.status !== "pending") return null;
 
   return (
@@ -77,20 +99,39 @@ export default function AcceptInvitationBanner({
       <div style={{ fontSize: 14 }}>
         <b>{invite.project.name}</b> 프로젝트에 초대되었습니다. 수락하시겠어요?
       </div>
-      <button
-        onClick={onAccept}
-        disabled={loading}
-        style={{
-          padding: "8px 12px",
-          borderRadius: 10,
-          background: "#2563eb",
-          color: "white",
-          fontWeight: 600,
-          opacity: loading ? 0.6 : 1,
-        }}
-      >
-        {loading ? "처리 중…" : "수락하기"}
-      </button>
+      <div style={{ display: "flex", gap: 8 }}>
+        <button
+          type="button"
+          onClick={onReject}
+          disabled={rejecting || accepting}
+          style={{
+            padding: "8px 12px",
+            borderRadius: 10,
+            background: "white",
+            border: "1px solid #e5e7eb",
+            color: "#374151",
+            fontWeight: 600,
+            opacity: rejecting || accepting ? 0.6 : 1,
+          }}
+        >
+          {rejecting ? "거절 중…" : "거절하기"}
+        </button>
+        <button
+          type="button"
+          onClick={onAccept}
+          disabled={accepting || rejecting}
+          style={{
+            padding: "8px 12px",
+            borderRadius: 10,
+            background: "#2563eb",
+            color: "white",
+            fontWeight: 600,
+            opacity: accepting || rejecting ? 0.6 : 1,
+          }}
+        >
+          {accepting ? "수락 중…" : "수락하기"}
+        </button>
+      </div>
     </div>
   );
 }

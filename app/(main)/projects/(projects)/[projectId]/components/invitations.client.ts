@@ -28,3 +28,7 @@ export async function getMyInvitationsClient(params?: {
 export async function acceptInvitationClient(invitationId: number) {
   await axiosClient.post(`/invitations/${invitationId}/accept`);
 }
+
+export async function rejectInvitationClient(invitationId: number) {
+  await axiosClient.delete(`/invitations/${invitationId}/reject`);
+}
