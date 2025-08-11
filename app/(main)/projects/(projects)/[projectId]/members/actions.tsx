@@ -35,6 +35,7 @@ export const removeMember = async (
 ): Promise<ActionResult<null>> => {
   try {
     await api.removeMember(projectId, userId);
+    revalidatePath(`/projects/${projectId}/members`);
     return {
       success: '멤버 제외 성공',
       data: null,
