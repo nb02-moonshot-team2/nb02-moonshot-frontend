@@ -22,6 +22,7 @@ export async function getMyInvitationsClient(params?: {
       limit: params?.limit ?? 50,
     },
   });
+  console.log("[getMyInvitationsClient] fetched", res);
   return res.data;
 }
 
