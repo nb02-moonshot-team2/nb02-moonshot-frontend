@@ -6,13 +6,16 @@ import { toast } from "react-toastify";
 import {
   getMyInvitationsClient,
   acceptInvitationClient,
+  rejectInvitationClient,
   type MyInvitation,
 } from "./invitations.client";
+
+type LoadingState = { id: number; action: "accept" | "reject" } | null;
 
 export default function InvitationsPanel() {
   const router = useRouter();
   const [items, setItems] = useState<MyInvitation[]>([]);
-  const [loadingId, setLoadingId] = useState<number | null>(null);
+  const [loading, setLoading] = useState<LoadingState>(null);
   const [error, setError] = useState<string | null>(null);
   const [loaded, setLoaded] = useState(false);
 
@@ -24,7 +27,6 @@ export default function InvitationsPanel() {
         page: 1,
         limit: 20,
       });
-      console.log("[InvitationsPanel] fetched", res);
       setItems(res.data);
     } catch (e: any) {
       console.error("[InvitationsPanel] error", e);
@@ -53,9 +55,9 @@ export default function InvitationsPanel() {
       </div>
     );
 
-  const onAccept = async (id: number, projectId: number) => {
+  const onAccept = async (id: number) => {
     try {
-      setLoadingId(id);
+      setLoading({ id, action: "accept" });
       await acceptInvitationClient(id);
       toast.success("초대 수락 완료");
       await load();
@@ -63,9 +65,30 @@ export default function InvitationsPanel() {
     } catch (e: any) {
       toast.error(e?.message ?? "초대 수락에 실패했습니다.");
     } finally {
-      setLoadingId(null);
+      setLoading(null);
     }
   };
+
+  const onReject = async (id: number) => {
+    try {
+      // 간단 확인 모달 (원하면 제거 가능)
+      const ok = window.confirm("이 초대를 거절하시겠어요?");
+      if (!ok) return;
+
+      setLoading({ id, action: "reject" });
+      await rejectInvitationClient(id);
+      toast.info("초대가 거절되었습니다.");
+      await load();
+      router.refresh();
+    } catch (e: any) {
+      toast.error(e?.message ?? "초대 거절에 실패했습니다.");
+    } finally {
+      setLoading(null);
+    }
+  };
+
+  const isLoading = (id: number, action: "accept" | "reject") =>
+    loading?.id === id && loading.action === action;
 
   return (
     <div
@@ -98,31 +121,38 @@ export default function InvitationsPanel() {
                 초대일: {new Date(inv.invitedAt).toLocaleString()}
               </div>
             </div>
+
             <div style={{ display: "flex", gap: 8 }}>
-              <a
-                href={`/projects/${inv.projectId}`}
+              <button
+                onClick={() => onReject(inv.id)}
+                disabled={isLoading(inv.id, "reject")}
                 style={{
                   fontSize: 13,
                   padding: "6px 10px",
                   borderRadius: 8,
                   border: "1px solid #e5e7eb",
+                  background: "#fff",
+                  opacity: isLoading(inv.id, "reject") ? 0.6 : 1,
                 }}
+                aria-busy={isLoading(inv.id, "reject")}
               >
-                상세 보기
-              </a>
+                {isLoading(inv.id, "reject") ? "처리 중…" : "거절하기"}
+              </button>
+
               <button
-                onClick={() => onAccept(inv.id, inv.projectId)}
-                disabled={loadingId === inv.id}
+                onClick={() => onAccept(inv.id)}
+                disabled={isLoading(inv.id, "accept")}
                 style={{
                   fontSize: 13,
                   padding: "6px 10px",
                   borderRadius: 8,
                   background: "#2563eb",
                   color: "white",
-                  opacity: loadingId === inv.id ? 0.6 : 1,
+                  opacity: isLoading(inv.id, "accept") ? 0.6 : 1,
                 }}
+                aria-busy={isLoading(inv.id, "accept")}
               >
-                {loadingId === inv.id ? "처리 중…" : "수락하기"}
+                {isLoading(inv.id, "accept") ? "처리 중…" : "수락하기"}
               </button>
             </div>
           </li>
