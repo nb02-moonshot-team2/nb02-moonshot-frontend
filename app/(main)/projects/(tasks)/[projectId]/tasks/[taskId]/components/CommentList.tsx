@@ -23,7 +23,7 @@ const CommentItem = ({
   const author = comment.author!;
   return (
     <div className={cx("comment")}>
-      {author.profileImage ? (
+      {author?.profileImage ? (
         <Image
           className={cx("profileImage")}
           src={author.profileImage}
@@ -36,9 +36,9 @@ const CommentItem = ({
       )}
       <div className={cx("commentBody")}>
         <div className={cx("info")}>
-          <span className={cx("author")}>{author.name}</span>
+          <span className={cx("author")}>{author?.name ?? "익명"}</span>
           <span className={cx("createdAt")}>
-            {comment.createdAt.toLocaleString()}
+            {new Date(comment.createdAt as unknown as string).toLocaleString()}
           </span>
         </div>
         <div className={cx("commentContent")}>{comment.content}</div>
@@ -56,22 +56,17 @@ const CommentList = ({
   comments,
   taskId,
 }: {
-  comments: {
-    data: Comment[];
-    total: number;
-  };
+  comments: Comment[];
   taskId: number;
 }) => {
-  console.log("comments:", comments);
+  // 안전가드: 혹시라도 배열이 아니면 빈 배열로
+  const list = Array.isArray(comments) ? comments : [];
+
   const [state, dispatch, isPending] = useActionState(
     async (prevState: { content: string }, nextState: FormData) => {
-      const values = {
-        content: nextState.get("content") as string,
-      };
+      const values = { content: nextState.get("content") as string };
       const { error, success } = await createComment(taskId, values);
-      if (error) {
-        toast.error(error);
-      }
+      if (error) toast.error(error);
       if (success) {
         toast.success(success);
         return { content: "" };
@@ -80,6 +75,7 @@ const CommentList = ({
     },
     { content: "" }
   );
+
   return (
     <>
       <form action={dispatch}>
@@ -92,10 +88,9 @@ const CommentList = ({
         />
       </form>
       <div className={cx("commentList")}>
-        {Array.isArray(comments?.data) &&
-          comments.data.map((comment) => (
-            <CommentItem key={comment.id} taskId={taskId} comment={comment} />
-          ))}
+        {list.map((comment) => (
+          <CommentItem key={comment.id} taskId={taskId} comment={comment} />
+        ))}
       </div>
     </>
   );
